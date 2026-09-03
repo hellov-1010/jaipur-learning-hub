@@ -28,6 +28,9 @@ export function Header() {
           <Link to="/courses" className="text-muted-foreground transition-colors hover:text-foreground [&.active]:text-foreground">
             Courses
           </Link>
+          <Link to="/doubt-solver" className="text-muted-foreground transition-colors hover:text-foreground [&.active]:text-foreground">
+            AI Doubt Solver
+          </Link>
           <Link to="/dashboard" className="text-muted-foreground transition-colors hover:text-foreground [&.active]:text-foreground">
             Dashboard
           </Link>
@@ -57,6 +60,7 @@ function MobileNav() {
         {[
           { to: "/", label: "Home" },
           { to: "/courses", label: "Courses" },
+          { to: "/doubt-solver", label: "AI Doubt Solver" },
           { to: "/dashboard", label: "Dashboard" },
           { to: "/contact", label: "Contact" },
         ].map((l) => (
@@ -98,6 +102,7 @@ export function Footer() {
           <h3 className="text-sm font-semibold uppercase tracking-wider">Quick Links</h3>
           <ul className="mt-4 space-y-2 text-sm opacity-80">
             <li><Link to="/courses" className="hover:underline">Free Courses</Link></li>
+            <li><Link to="/doubt-solver" className="hover:underline">AI Doubt Solver</Link></li>
             <li><Link to="/dashboard" className="hover:underline">Dashboard</Link></li>
             <li><Link to="/contact" className="hover:underline">Contact Us</Link></li>
           </ul>
