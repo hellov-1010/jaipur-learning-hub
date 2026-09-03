@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursesRouteImport } from './routes/courses'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as DoubtSolverRouteImport } from './routes/doubt-solver'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const DashboardRoute = DashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DoubtSolverRoute = DoubtSolverRouteImport.update({
+  id: '/doubt-solver',
+  path: '/doubt-solver',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/dashboard': typeof DashboardRoute
+  '/doubt-solver': typeof DoubtSolverRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/dashboard': typeof DashboardRoute
+  '/doubt-solver': typeof DoubtSolverRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,15 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/courses': typeof CoursesRoute
   '/dashboard': typeof DashboardRoute
+  '/doubt-solver': typeof DoubtSolverRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/courses' | '/dashboard'
+  fullPaths: '/' | '/contact' | '/courses' | '/dashboard' | '/doubt-solver'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/courses' | '/dashboard'
-  id: '__root__' | '/' | '/contact' | '/courses' | '/dashboard'
+  to: '/' | '/contact' | '/courses' | '/dashboard' | '/doubt-solver'
+  id:
+    '__root__' | '/' | '/contact' | '/courses' | '/dashboard' | '/doubt-solver'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +77,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CoursesRoute: typeof CoursesRoute
   DashboardRoute: typeof DashboardRoute
+  DoubtSolverRoute: typeof DoubtSolverRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +110,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/doubt-solver': {
+      id: '/doubt-solver'
+      path: '/doubt-solver'
+      fullPath: '/doubt-solver'
+      preLoaderRoute: typeof DoubtSolverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +125,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CoursesRoute: CoursesRoute,
   DashboardRoute: DashboardRoute,
+  DoubtSolverRoute: DoubtSolverRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
