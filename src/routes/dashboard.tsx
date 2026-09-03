@@ -5,9 +5,9 @@ export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
       { title: `Dashboard — ${CENTER.name}` },
-      { name: "description", content: "Student and teacher dashboard — batches, attendance, schedule and performance at VidyaPoint Academy, Jaipur." },
+      { name: "description", content: "Student and teacher dashboard — free batches, attendance, schedule and performance at Badddie Education Center, Jaipur." },
       { property: "og:title", content: `Dashboard — ${CENTER.name}` },
-      { property: "og:description", content: "Track batches, attendance and performance." },
+      { property: "og:description", content: "Track free batches, attendance and performance." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 
 export const CENTER = {
-  name: "VidyaPoint Academy",
-  tagline: "Learn. Practice. Succeed.",
+  name: "Badddie Education Center",
+  tagline: "Learn for Free. Grow Without Limits.",
   address: "Tonk Road, Jaipur, Rajasthan",
   timing: "Open Daily: 9:00 AM – 8:00 PM",
   email: "abcd@gmail.com",
@@ -17,7 +17,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link to="/" className="flex items-center gap-2">
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-lg font-black text-primary-foreground">
-            V
+            B
           </span>
           <span className="text-lg font-bold tracking-tight">{CENTER.name}</span>
         </Link>
@@ -86,18 +86,18 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2">
             <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-foreground text-lg font-black text-primary">
-              V
+              B
             </span>
             <span className="text-lg font-bold">{CENTER.name}</span>
           </div>
           <p className="mt-4 text-sm opacity-70">
-            Quality offline coaching for students, teachers, and training professionals on Tonk Road, Jaipur.
+            Free quality education for students, teachers, and training professionals on Tonk Road, Jaipur.
           </p>
         </div>
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider">Quick Links</h3>
           <ul className="mt-4 space-y-2 text-sm opacity-80">
-            <li><Link to="/courses" className="hover:underline">Courses</Link></li>
+            <li><Link to="/courses" className="hover:underline">Free Courses</Link></li>
             <li><Link to="/dashboard" className="hover:underline">Dashboard</Link></li>
             <li><Link to="/contact" className="hover:underline">Contact Us</Link></li>
           </ul>
