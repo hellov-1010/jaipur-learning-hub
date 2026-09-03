@@ -110,13 +110,13 @@ function DashboardPage() {
         <header className="border-b border-border px-6 py-4">
           <h2 className="font-bold">Weekly Performance</h2>
         </header>
-        <div className="flex h-48 items-end gap-3 px-6 py-6">
+        <div className="flex h-56 items-end gap-3 px-6 py-6">
           {[62, 75, 58, 82, 70, 91, 78].map((v, i) => (
-            <div key={i} className="flex flex-1 flex-col items-center gap-2">
+            <div key={i} className="flex h-full flex-1 flex-col items-center justify-end gap-2">
+              <span className="text-xs font-semibold">{v}%</span>
               <div
                 className="w-full rounded-t-lg bg-primary transition-all hover:opacity-80"
                 style={{ height: `${v}%` }}
-                title={`${v}%`}
               />
               <span className="text-xs text-muted-foreground">
                 {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][i]}
