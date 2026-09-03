@@ -5,7 +5,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: `Contact Us — ${CENTER.name}, Tonk Road Jaipur` },
-      { name: "description", content: "Visit our offline center on Tonk Road, Jaipur. Open 9 AM–8 PM daily. Call 87223 456910 or the 24/7 helpline 1800-123-4567." },
+      { name: "description", content: "Visit our free education center on Tonk Road, Jaipur. Open 9 AM–8 PM daily. Call 87223 456910 or the 24/7 helpline 1800-123-4567." },
       { property: "og:title", content: `Contact — ${CENTER.name}` },
       { property: "og:description", content: "Tonk Road, Jaipur. Open 9 AM–8 PM. 24/7 student helpline." },
       { property: "og:type", content: "website" },
@@ -20,7 +20,7 @@ function ContactPage() {
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
       <h1 className="text-3xl font-black tracking-tight sm:text-4xl">Contact Us</h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
-        Reach out for admissions, doubts, or a free campus tour. We're happy to help.
+        Reach out for free admissions, doubts, or a free campus tour. We're happy to help.
       </p>
 
       <div className="mt-10 grid gap-6 lg:grid-cols-2">

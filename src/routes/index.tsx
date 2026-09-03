@@ -4,10 +4,10 @@ import { CENTER } from "@/components/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `${CENTER.name} — Coaching Institute on Tonk Road, Jaipur` },
-      { name: "description", content: "Offline coaching center on Tonk Road, Jaipur for students, teachers & training professionals. Open 9 AM–8 PM. 24/7 student helpline." },
-      { property: "og:title", content: `${CENTER.name} — Coaching Institute, Jaipur` },
-      { property: "og:description", content: "Quality education for students, teachers & training workers. Tonk Road, Jaipur. Open 9 AM–8 PM daily." },
+      { title: `${CENTER.name} — Free Education on Tonk Road, Jaipur` },
+      { name: "description", content: "Free offline education center on Tonk Road, Jaipur for students, teachers & training professionals. Open 9 AM–8 PM. 24/7 student helpline." },
+      { property: "og:title", content: `${CENTER.name} — Free Education, Jaipur` },
+      { property: "og:description", content: "Quality free education for students, teachers & training workers. Tonk Road, Jaipur. Open 9 AM–8 PM daily." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -16,24 +16,24 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
+  { value: "100%", label: "Free Education" },
   { value: "12,000+", label: "Students Taught" },
   { value: "150+", label: "Expert Faculty" },
-  { value: "95%", label: "Success Rate" },
   { value: "24/7", label: "Doubt Helpline" },
 ];
 
 const audiences = [
   {
     title: "For Students",
-    desc: "Class 6–12, JEE, NEET & board prep with structured batches, daily practice and personal mentorship.",
+    desc: "Free classes for Class 6–12, JEE, NEET & board prep with structured batches, daily practice and personal mentorship.",
   },
   {
     title: "For Teachers",
-    desc: "Teaching certification programs, pedagogy workshops and classroom-management training.",
+    desc: "Free teaching certification programs, pedagogy workshops and classroom-management training.",
   },
   {
     title: "For Training Workers",
-    desc: "Skill development, communication and professional upskilling programs for working professionals.",
+    desc: "Free skill development, communication and professional upskilling programs for working professionals.",
   },
 ];
 
@@ -50,15 +50,15 @@ function Index() {
             {CENTER.tagline}
           </h1>
           <p className="mt-6 max-w-xl text-lg opacity-80">
-            Jaipur's trusted offline learning center for students, teachers, and training professionals.
-            Structured batches, expert faculty, and a 24/7 doubt helpline.
+            Jaipur's trusted free education center for students, teachers, and training professionals.
+            Structured batches, expert faculty, and a 24/7 doubt helpline — at no cost.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               to="/courses"
               className="rounded-lg bg-primary-foreground px-6 py-3 text-sm font-bold text-primary transition-transform hover:scale-[1.03]"
             >
-              Explore Courses
+              Explore Free Courses
             </Link>
             <a
               href={`tel:${CENTER.helpline.replace(/[^0-9]/g, "")}`}
@@ -86,7 +86,7 @@ function Index() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <h2 className="text-3xl font-black tracking-tight sm:text-4xl">Who We Teach</h2>
         <p className="mt-3 max-w-xl text-muted-foreground">
-          Programs designed for every learner — from school students to working professionals.
+          Free programs designed for every learner — from school students to working professionals.
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {audiences.map((a) => (
@@ -110,7 +110,7 @@ function Index() {
           <div>
             <h2 className="text-2xl font-black sm:text-3xl">Stuck on a doubt at 2 AM?</h2>
             <p className="mt-2 text-muted-foreground">
-              Our student helpline is available 24/7 for doubts and queries — call anytime.
+              Our student helpline is available 24/7 for doubts and queries — call anytime, completely free.
             </p>
           </div>
           <a
@@ -128,7 +128,7 @@ function Index() {
           <div>
             <h2 className="text-3xl font-black tracking-tight sm:text-4xl">Visit Our Offline Center</h2>
             <p className="mt-3 text-muted-foreground">
-              Walk in for a free counselling session and campus tour.
+              Walk in for a free counselling session and campus tour. No fees, no hidden charges.
             </p>
             <dl className="mt-8 space-y-5">
               <div className="flex gap-4">

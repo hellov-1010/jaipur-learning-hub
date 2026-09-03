@@ -4,10 +4,10 @@ import { CENTER } from "@/components/site";
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: `Courses — ${CENTER.name}` },
-      { name: "description", content: "Courses for students, teachers and training professionals — JEE, NEET, boards, teaching certification and skill development in Jaipur." },
-      { property: "og:title", content: `Courses — ${CENTER.name}` },
-      { property: "og:description", content: "Explore batches and programs at our Tonk Road, Jaipur center." },
+      { title: `Free Courses — ${CENTER.name}` },
+      { name: "description", content: "Free courses for students, teachers and training professionals — JEE, NEET, boards, teaching certification and skill development in Jaipur." },
+      { property: "og:title", content: `Free Courses — ${CENTER.name}` },
+      { property: "og:description", content: "Explore free batches and programs at our Tonk Road, Jaipur center." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -16,16 +16,16 @@ export const Route = createFileRoute("/courses")({
 });
 
 const courses = [
-  { category: "Students", name: "JEE (Main + Advanced)", duration: "1–2 Years", mode: "Offline Batch", price: "₹48,000/yr" },
-  { category: "Students", name: "NEET-UG", duration: "1–2 Years", mode: "Offline Batch", price: "₹45,000/yr" },
-  { category: "Students", name: "Class 6–10 Foundation", duration: "1 Year", mode: "Offline Batch", price: "₹25,000/yr" },
-  { category: "Students", name: "Class 11–12 Boards + CUET", duration: "1 Year", mode: "Offline Batch", price: "₹30,000/yr" },
-  { category: "Teachers", name: "Teaching Certification Program", duration: "6 Months", mode: "Hybrid", price: "₹18,000" },
-  { category: "Teachers", name: "Classroom Management Workshop", duration: "4 Weeks", mode: "Offline", price: "₹6,000" },
-  { category: "Teachers", name: "Pedagogy & Assessment Design", duration: "8 Weeks", mode: "Hybrid", price: "₹9,000" },
-  { category: "Training Workers", name: "Communication & Soft Skills", duration: "6 Weeks", mode: "Offline (Evening)", price: "₹7,500" },
-  { category: "Training Workers", name: "Digital Tools for Professionals", duration: "8 Weeks", mode: "Hybrid", price: "₹8,500" },
-  { category: "Training Workers", name: "Corporate Skill Development", duration: "3 Months", mode: "Offline (Weekend)", price: "₹15,000" },
+  { category: "Students", name: "JEE (Main + Advanced)", duration: "1–2 Years", mode: "Offline Batch", price: "Free" },
+  { category: "Students", name: "NEET-UG", duration: "1–2 Years", mode: "Offline Batch", price: "Free" },
+  { category: "Students", name: "Class 6–10 Foundation", duration: "1 Year", mode: "Offline Batch", price: "Free" },
+  { category: "Students", name: "Class 11–12 Boards + CUET", duration: "1 Year", mode: "Offline Batch", price: "Free" },
+  { category: "Teachers", name: "Teaching Certification Program", duration: "6 Months", mode: "Hybrid", price: "Free" },
+  { category: "Teachers", name: "Classroom Management Workshop", duration: "4 Weeks", mode: "Offline", price: "Free" },
+  { category: "Teachers", name: "Pedagogy & Assessment Design", duration: "8 Weeks", mode: "Hybrid", price: "Free" },
+  { category: "Training Workers", name: "Communication & Soft Skills", duration: "6 Weeks", mode: "Offline (Evening)", price: "Free" },
+  { category: "Training Workers", name: "Digital Tools for Professionals", duration: "8 Weeks", mode: "Hybrid", price: "Free" },
+  { category: "Training Workers", name: "Corporate Skill Development", duration: "3 Months", mode: "Offline (Weekend)", price: "Free" },
 ];
 
 const categories = ["All", "Students", "Teachers", "Training Workers"];
@@ -33,9 +33,9 @@ const categories = ["All", "Students", "Teachers", "Training Workers"];
 function CoursesPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-      <h1 className="text-3xl font-black tracking-tight sm:text-4xl">Courses & Programs</h1>
+      <h1 className="text-3xl font-black tracking-tight sm:text-4xl">Free Courses & Programs</h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
-        Structured offline batches at our Tonk Road, Jaipur center. Open {CENTER.timing.replace("Open Daily: ", "")} —
+        Structured offline batches at our Tonk Road, Jaipur center — completely free of cost. Open {CENTER.timing.replace("Open Daily: ", "")} —
         visit for a free demo class or call our 24/7 helpline {CENTER.helpline}.
       </p>
 
@@ -61,7 +61,7 @@ function CoursesPage() {
                     </div>
                     <div>
                       <dt className="text-muted-foreground">Fee</dt>
-                      <dd className="font-semibold">{c.price}</dd>
+                      <dd className="font-semibold text-primary">{c.price}</dd>
                     </div>
                   </dl>
                   <a
