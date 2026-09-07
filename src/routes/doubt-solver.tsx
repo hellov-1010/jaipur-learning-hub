@@ -15,7 +15,7 @@ export const Route = createFileRoute("/doubt-solver")({
       {
         name: "description",
         content:
-          "Ask any study doubt and get an instant step-by-step AI answer, free. Maths, Science, JEE, NEET and board prep help from Badddie Education Center, Jaipur.",
+          "Ask any study doubt and get an instant step-by-step AI answer, free. Coding, AI, maths and science help from StudySync, Jaipur.",
       },
       { property: "og:title", content: `Free AI Doubt Solver — ${CENTER.name}` },
       {
@@ -81,7 +81,7 @@ function DoubtSolver() {
         <div className="flex flex-col items-center gap-4 text-center">
           <img
             src={mascot}
-            alt="Badddie AI tutor mascot"
+            alt="StudySync AI tutor mascot"
             width={768}
             height={768}
             className="h-28 w-28 drop-shadow-md sm:h-36 sm:w-36"
