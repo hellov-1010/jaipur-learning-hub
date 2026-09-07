@@ -1,13 +1,19 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { CENTER } from "@/components/site";
+import aiImg from "@/assets/course-ai.jpg";
+import webImg from "@/assets/course-web.jpg";
+import dataImg from "@/assets/course-data.jpg";
+import cloudImg from "@/assets/course-cloud.jpg";
+import roboticsImg from "@/assets/course-robotics.jpg";
+import designImg from "@/assets/course-design.jpg";
 
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: `Free Courses — ${CENTER.name}` },
-      { name: "description", content: "Free courses for students, teachers and training professionals — JEE, NEET, boards, teaching certification and skill development in Jaipur." },
-      { property: "og:title", content: `Free Courses — ${CENTER.name}` },
-      { property: "og:description", content: "Explore free batches and programs at our Tonk Road, Jaipur center." },
+      { title: `Future Tech Courses — ${CENTER.name}` },
+      { name: "description", content: "Free ed-tech courses in AI & Machine Learning, Full-Stack Web, Data Science, Cloud & Cybersecurity, Robotics & IoT and UI/UX Design at StudySync, Tonk Road, Jaipur." },
+      { property: "og:title", content: `Future Tech Courses — ${CENTER.name}` },
+      { property: "og:description", content: "Free future-ready technology programs with expert mentors in Jaipur." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -16,65 +22,148 @@ export const Route = createFileRoute("/courses")({
 });
 
 const courses = [
-  { category: "Students", name: "JEE (Main + Advanced)", duration: "1–2 Years", mode: "Offline Batch", price: "Free" },
-  { category: "Students", name: "NEET-UG", duration: "1–2 Years", mode: "Offline Batch", price: "Free" },
-  { category: "Students", name: "Class 6–10 Foundation", duration: "1 Year", mode: "Offline Batch", price: "Free" },
-  { category: "Students", name: "Class 11–12 Boards + CUET", duration: "1 Year", mode: "Offline Batch", price: "Free" },
-  { category: "Teachers", name: "Teaching Certification Program", duration: "6 Months", mode: "Hybrid", price: "Free" },
-  { category: "Teachers", name: "Classroom Management Workshop", duration: "4 Weeks", mode: "Offline", price: "Free" },
-  { category: "Teachers", name: "Pedagogy & Assessment Design", duration: "8 Weeks", mode: "Hybrid", price: "Free" },
-  { category: "Training Workers", name: "Communication & Soft Skills", duration: "6 Weeks", mode: "Offline (Evening)", price: "Free" },
-  { category: "Training Workers", name: "Digital Tools for Professionals", duration: "8 Weeks", mode: "Hybrid", price: "Free" },
-  { category: "Training Workers", name: "Corporate Skill Development", duration: "3 Months", mode: "Offline (Weekend)", price: "Free" },
+  {
+    track: "Artificial Intelligence",
+    name: "AI & Machine Learning Bootcamp",
+    desc: "Python, neural networks, prompt engineering and building real AI apps end to end.",
+    duration: "6 Months",
+    mode: "Offline + Live Online",
+    level: "Beginner to Advanced",
+    img: aiImg,
+    mentor: "Dr. Ananya Verma",
+  },
+  {
+    track: "Software Engineering",
+    name: "Full-Stack Web Development",
+    desc: "HTML, CSS, JavaScript, React, Node and databases — ship production-ready products.",
+    duration: "5 Months",
+    mode: "Offline Batch",
+    level: "Beginner friendly",
+    img: webImg,
+    mentor: "Sneha Kulkarni",
+  },
+  {
+    track: "Data",
+    name: "Data Science & Analytics",
+    desc: "SQL, Python, statistics, dashboards and storytelling with real company datasets.",
+    duration: "4 Months",
+    mode: "Hybrid",
+    level: "Intermediate",
+    img: dataImg,
+    mentor: "Rahul Meena",
+  },
+  {
+    track: "Infrastructure",
+    name: "Cloud Computing & Cybersecurity",
+    desc: "AWS basics, DevOps pipelines, ethical hacking fundamentals and secure deployments.",
+    duration: "4 Months",
+    mode: "Offline (Evening)",
+    level: "Intermediate",
+    img: cloudImg,
+    mentor: "Arjun Sharma",
+  },
+  {
+    track: "Hardware",
+    name: "Robotics & IoT Engineering",
+    desc: "Microcontrollers, sensors, automation and smart-device projects in our hardware lab.",
+    duration: "3 Months",
+    mode: "Offline Lab",
+    level: "Beginner",
+    img: roboticsImg,
+    mentor: "Arjun Sharma",
+  },
+  {
+    track: "Design",
+    name: "UI/UX & Product Design",
+    desc: "Design thinking, wireframes, Figma, design systems and portfolio-ready case studies.",
+    duration: "3 Months",
+    mode: "Hybrid",
+    level: "Beginner",
+    img: designImg,
+    mentor: "Sneha Kulkarni",
+  },
 ];
-
-const categories = ["All", "Students", "Teachers", "Training Workers"];
 
 function CoursesPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-      <h1 className="text-3xl font-black tracking-tight sm:text-4xl">Free Courses & Programs</h1>
+      <span className="rounded-full bg-primary px-3 py-1 text-xs font-bold uppercase tracking-widest text-primary-foreground">
+        New-age Ed-Tech
+      </span>
+      <h1 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">Future Tech Courses</h1>
       <p className="mt-3 max-w-2xl text-muted-foreground">
-        Structured offline batches at our Tonk Road, Jaipur center — completely free of cost. Open {CENTER.timing.replace("Open Daily: ", "")} —
-        visit for a free demo class or call our 24/7 helpline {CENTER.helpline}.
+        Skill tracks built for tomorrow's tech companies — AI, software, data, cloud, robotics and design.
+        Every program is 100% free at our Tonk Road, Jaipur center. Open {CENTER.timing.replace("Open Daily: ", "")} —
+        or call our 24/7 helpline {CENTER.helpline}.
       </p>
 
-      {categories.slice(1).map((cat) => (
-        <section key={cat} className="mt-14">
-          <h2 className="border-b border-border pb-3 text-2xl font-bold">{cat}</h2>
-          <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {courses
-              .filter((c) => c.category === cat)
-              .map((c) => (
-                <article
-                  key={c.name}
-                  className="flex flex-col rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-xl"
+      <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        {courses.map((c) => (
+          <article
+            key={c.name}
+            className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-xl"
+          >
+            <img
+              src={c.img}
+              alt={`${c.name} class at ${CENTER.name}`}
+              loading="lazy"
+              width={1024}
+              height={640}
+              className="h-44 w-full object-cover"
+            />
+            <div className="flex flex-1 flex-col p-6">
+              <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                {c.track} • {c.mode}
+              </span>
+              <h2 className="mt-2 text-lg font-bold leading-snug">{c.name}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
+              <dl className="mt-4 grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <dt className="text-muted-foreground">Duration</dt>
+                  <dd className="font-semibold">{c.duration}</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground">Fee</dt>
+                  <dd className="font-semibold text-primary">Free</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground">Level</dt>
+                  <dd className="font-semibold">{c.level}</dd>
+                </div>
+                <div>
+                  <dt className="text-muted-foreground">Mentor</dt>
+                  <dd className="font-semibold">{c.mentor}</dd>
+                </div>
+              </dl>
+              <div className="mt-6 flex gap-3">
+                <Link
+                  to="/login"
+                  className="flex-1 rounded-lg bg-primary px-4 py-2.5 text-center text-sm font-bold text-primary-foreground transition-opacity hover:opacity-85"
                 >
-                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    {c.mode}
-                  </span>
-                  <h3 className="mt-2 text-lg font-bold leading-snug">{c.name}</h3>
-                  <dl className="mt-4 flex gap-6 text-sm">
-                    <div>
-                      <dt className="text-muted-foreground">Duration</dt>
-                      <dd className="font-semibold">{c.duration}</dd>
-                    </div>
-                    <div>
-                      <dt className="text-muted-foreground">Fee</dt>
-                      <dd className="font-semibold text-primary">{c.price}</dd>
-                    </div>
-                  </dl>
-                  <a
-                    href={`tel:${CENTER.phoneRaw}`}
-                    className="mt-6 rounded-lg bg-primary px-4 py-2.5 text-center text-sm font-bold text-primary-foreground transition-opacity hover:opacity-85"
-                  >
-                    Enquire Now
-                  </a>
-                </article>
-              ))}
-          </div>
-        </section>
-      ))}
+                  Join Free
+                </Link>
+                <a
+                  href={`tel:${CENTER.phoneRaw}`}
+                  className="rounded-lg border border-border px-4 py-2.5 text-center text-sm font-bold transition-colors hover:bg-secondary"
+                >
+                  Call
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div className="mt-14 rounded-2xl border border-border bg-secondary/60 p-8 text-center">
+        <h2 className="text-2xl font-black">Meet the mentors behind these tracks</h2>
+        <p className="mt-2 text-muted-foreground">Industry engineers and educators teaching every subject.</p>
+        <Link
+          to="/teachers"
+          className="mt-5 inline-block rounded-lg bg-primary px-6 py-3 text-sm font-bold text-primary-foreground"
+        >
+          View Our Teachers
+        </Link>
+      </div>
     </div>
   );
 }
