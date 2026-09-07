@@ -14,6 +14,8 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursesRouteImport } from './routes/courses'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as DoubtSolverRouteImport } from './routes/doubt-solver'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as TeachersRouteImport } from './routes/teachers'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +42,16 @@ const DoubtSolverRoute = DoubtSolverRouteImport.update({
   path: '/doubt-solver',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TeachersRoute = TeachersRouteImport.update({
+  id: '/teachers',
+  path: '/teachers',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +59,8 @@ export interface FileRoutesByFullPath {
   '/courses': typeof CoursesRoute
   '/dashboard': typeof DashboardRoute
   '/doubt-solver': typeof DoubtSolverRoute
+  '/login': typeof LoginRoute
+  '/teachers': typeof TeachersRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +68,8 @@ export interface FileRoutesByTo {
   '/courses': typeof CoursesRoute
   '/dashboard': typeof DashboardRoute
   '/doubt-solver': typeof DoubtSolverRoute
+  '/login': typeof LoginRoute
+  '/teachers': typeof TeachersRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,14 +78,37 @@ export interface FileRoutesById {
   '/courses': typeof CoursesRoute
   '/dashboard': typeof DashboardRoute
   '/doubt-solver': typeof DoubtSolverRoute
+  '/login': typeof LoginRoute
+  '/teachers': typeof TeachersRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/courses' | '/dashboard' | '/doubt-solver'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/courses'
+    | '/dashboard'
+    | '/doubt-solver'
+    | '/login'
+    | '/teachers'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/courses' | '/dashboard' | '/doubt-solver'
+  to:
+    | '/'
+    | '/contact'
+    | '/courses'
+    | '/dashboard'
+    | '/doubt-solver'
+    | '/login'
+    | '/teachers'
   id:
-    '__root__' | '/' | '/contact' | '/courses' | '/dashboard' | '/doubt-solver'
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/courses'
+    | '/dashboard'
+    | '/doubt-solver'
+    | '/login'
+    | '/teachers'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -78,6 +117,8 @@ export interface RootRouteChildren {
   CoursesRoute: typeof CoursesRoute
   DashboardRoute: typeof DashboardRoute
   DoubtSolverRoute: typeof DoubtSolverRoute
+  LoginRoute: typeof LoginRoute
+  TeachersRoute: typeof TeachersRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -117,6 +158,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DoubtSolverRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/teachers': {
+      id: '/teachers'
+      path: '/teachers'
+      fullPath: '/teachers'
+      preLoaderRoute: typeof TeachersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -126,6 +181,8 @@ const rootRouteChildren: RootRouteChildren = {
   CoursesRoute: CoursesRoute,
   DashboardRoute: DashboardRoute,
   DoubtSolverRoute: DoubtSolverRoute,
+  LoginRoute: LoginRoute,
+  TeachersRoute: TeachersRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

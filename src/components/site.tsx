@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 
 export const CENTER = {
-  name: "Badddie Education Center",
-  tagline: "Learn for Free. Grow Without Limits.",
+  name: "StudySync",
+  tagline: "Learn Future Tech for Free. Build What's Next.",
   address: "Tonk Road, Jaipur, Rajasthan",
   timing: "Open Daily: 9:00 AM – 8:00 PM",
   email: "abcd@gmail.com",
@@ -17,7 +17,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link to="/" className="flex items-center gap-2">
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-lg font-black text-primary-foreground">
-            B
+            S
           </span>
           <span className="text-lg font-bold tracking-tight">{CENTER.name}</span>
         </Link>
@@ -31,8 +31,14 @@ export function Header() {
           <Link to="/doubt-solver" className="text-muted-foreground transition-colors hover:text-foreground [&.active]:text-foreground">
             AI Doubt Solver
           </Link>
+          <Link to="/teachers" className="text-muted-foreground transition-colors hover:text-foreground [&.active]:text-foreground">
+            Teachers
+          </Link>
           <Link to="/dashboard" className="text-muted-foreground transition-colors hover:text-foreground [&.active]:text-foreground">
             Dashboard
+          </Link>
+          <Link to="/login" className="text-muted-foreground transition-colors hover:text-foreground [&.active]:text-foreground">
+            Student Login
           </Link>
           <Link to="/contact" className="text-muted-foreground transition-colors hover:text-foreground [&.active]:text-foreground">
             Contact
@@ -61,7 +67,9 @@ function MobileNav() {
           { to: "/", label: "Home" },
           { to: "/courses", label: "Courses" },
           { to: "/doubt-solver", label: "AI Doubt Solver" },
+          { to: "/teachers", label: "Teachers" },
           { to: "/dashboard", label: "Dashboard" },
+          { to: "/login", label: "Student Login" },
           { to: "/contact", label: "Contact" },
         ].map((l) => (
           <Link
@@ -90,19 +98,21 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2">
             <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary-foreground text-lg font-black text-primary">
-              B
+              S
             </span>
             <span className="text-lg font-bold">{CENTER.name}</span>
           </div>
           <p className="mt-4 text-sm opacity-70">
-            Free quality education for students, teachers, and training professionals on Tonk Road, Jaipur.
+            Free future-tech education for students, teachers, and training professionals on Tonk Road, Jaipur.
           </p>
         </div>
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider">Quick Links</h3>
           <ul className="mt-4 space-y-2 text-sm opacity-80">
-            <li><Link to="/courses" className="hover:underline">Free Courses</Link></li>
+            <li><Link to="/courses" className="hover:underline">Future Tech Courses</Link></li>
             <li><Link to="/doubt-solver" className="hover:underline">AI Doubt Solver</Link></li>
+            <li><Link to="/teachers" className="hover:underline">Our Teachers</Link></li>
+            <li><Link to="/login" className="hover:underline">Student Login</Link></li>
             <li><Link to="/dashboard" className="hover:underline">Dashboard</Link></li>
             <li><Link to="/contact" className="hover:underline">Contact Us</Link></li>
           </ul>
