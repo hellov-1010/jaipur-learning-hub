@@ -1,14 +1,16 @@
-# Welcome to your Lovable project
+# Jaipur Learning Hub
+
+act as a developer creat a responsive educational website just like pw where the target audien should be students , teaches , training workers include the theme in black nd white the dashboard shoulb be professional and attractive the timming will be 9am to 8 pm open nd the loaction will be jaipur tonk road the email is abcd@gmail.com, nd phone no is 87223456910 this is the offline center location and contact no, also there should be an helpline no which is avialble 24/7 for student doubts nd quiry
 
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/9a0b6351-ab62-491a-94f6-c97ad553b884).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +22,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
