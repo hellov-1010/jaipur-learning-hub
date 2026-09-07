@@ -78,10 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Badddie Education Center — Free Education, Tonk Road Jaipur" },
+      { title: "StudySync — Free Future Tech Education, Tonk Road Jaipur" },
       { name: "description", content: "Free offline education for students, teachers & training professionals. Tonk Road, Jaipur. Open 9 AM–8 PM. 24/7 student helpline." },
-      { name: "author", content: "Badddie Education Center" },
-      { property: "og:title", content: "Badddie Education Center — Free Education, Tonk Road Jaipur" },
+      { name: "author", content: "StudySync" },
+      { property: "og:title", content: "StudySync — Free Future Tech Education, Tonk Road Jaipur" },
       { property: "og:description", content: "Free offline education for students, teachers & training professionals. Open 9 AM–8 PM daily." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

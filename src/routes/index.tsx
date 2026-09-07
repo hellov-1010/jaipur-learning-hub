@@ -28,15 +28,15 @@ const stats = [
 const audiences = [
   {
     title: "For Students",
-    desc: "Free classes for Class 6–12, JEE, NEET & board prep with structured batches, daily practice and personal mentorship.",
+    desc: "Free future-tech tracks in AI, full-stack coding, data science and design with hands-on projects and mentorship.",
   },
   {
     title: "For Teachers",
-    desc: "Free teaching certification programs, pedagogy workshops and classroom-management training.",
+    desc: "Free ed-tech upskilling — teaching with AI tools, digital classrooms and modern curriculum design.",
   },
   {
     title: "For Training Workers",
-    desc: "Free skill development, communication and professional upskilling programs for working professionals.",
+    desc: "Free cloud, cybersecurity, automation and workplace-tech programs for working professionals.",
   },
 ];
 
@@ -63,15 +63,15 @@ function Index() {
             {CENTER.tagline}
           </h1>
           <p className="mt-6 max-w-xl text-lg opacity-80">
-            Jaipur's trusted free education center for students, teachers, and training professionals.
-            Structured batches, expert faculty, and a 24/7 doubt helpline — at no cost.
+            Jaipur's free ed-tech center for students, teachers and working professionals — AI, coding, data,
+            cloud, robotics and design. Expert mentors and a 24/7 doubt helpline, at no cost.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               to="/courses"
               className="rounded-lg bg-primary-foreground px-6 py-3 text-sm font-bold text-primary transition-transform hover:scale-[1.03]"
             >
-              Explore Free Courses
+              Explore Future Tech Courses
             </Link>
             <Link
               to="/doubt-solver"
@@ -90,7 +90,7 @@ function Index() {
           <div className="relative">
             <img
               src={heroImg}
-              alt="Students learning together at Badddie Education Center in Jaipur"
+              alt="Students learning future tech together at StudySync in Jaipur"
               width={1280}
               height={960}
               className="w-full rounded-3xl border-4 border-primary-foreground/30 object-cover shadow-2xl"
@@ -124,7 +124,7 @@ function Index() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6">
         <h2 className="text-3xl font-black tracking-tight sm:text-4xl">Who We Teach</h2>
         <p className="mt-3 max-w-xl text-muted-foreground">
-          Free programs designed for every learner — from school students to working professionals.
+          Free future-ready programs for every learner — from school students to working professionals.
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {audiences.map((a) => (
@@ -164,7 +164,7 @@ function Index() {
             </h2>
             <p className="mt-3 text-muted-foreground">
               Snap a question in your mind and get an instant step-by-step answer — Maths, Science,
-              JEE, NEET, boards and teaching skills. No fees, no waiting.
+              coding, AI, data, maths and science. No fees, no waiting.
             </p>
             <ul className="mt-6 grid gap-3 text-sm font-medium sm:grid-cols-2">
               <li className="rounded-xl border border-border bg-card px-4 py-3">📚 Step-by-step solutions</li>
